@@ -1,0 +1,11 @@
+$ cat /usr/local/share/guile/site/foo/bar.scm
+
+(define-module (foo bar)
+  #:export (frob))
+
+(define (frob x) (* 2 x))
+
+$ guile
+scheme@(guile-user)> (use-modules (foo bar))
+scheme@(guile-user)> (frob 12)
+$1 = 24
